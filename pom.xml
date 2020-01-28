@@ -58,10 +58,6 @@
         </plugins>
     </build>
     <distributionManagement>
-           <snapshotRepository>
-      		<id>nexus-releases</id>
-      			<url>http://localhost:9081/repository/maven-releases/</url>
-   	</snapshotRepository>
    	<snapshotRepository>
       		<id>nexus-snapshots</id>
       			<url>http://localhost:9081/repository/maven-snapshots/</url>
