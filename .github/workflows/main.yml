@@ -28,6 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Setup Java JDK
         uses: actions/setup-java@v2.3.0
-        with:
-          java-version: 2.3
-    
+        
+            
+            
