@@ -46,4 +46,9 @@ jobs:
           cd Artifacts
           echo 'Readme' > readme.html
           cd ..
-    
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with :
+          name: assets-for-artifacts
+          path : Artifacts
+
