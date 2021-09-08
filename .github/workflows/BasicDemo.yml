@@ -37,5 +37,13 @@ jobs:
         run: |
             cd target
             ls -a
-
+      
+      - name : create a temporary artifact  folder
+        run: mkdir Artifacts
+      
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with :
+          name: assets-for-artifacts
+          path : Artifacts
 
