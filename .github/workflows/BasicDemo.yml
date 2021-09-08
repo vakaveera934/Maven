@@ -42,7 +42,7 @@ jobs:
         run: mkdir Artifacts
       
       - name : Add artifacts to publish to the temp folder download folder
-        run:
+        run: |
           cd Artifacts
           echo 'Readme' > readme.html
           cd ..
