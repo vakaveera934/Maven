@@ -19,6 +19,8 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2.1.0
+        with:
+         token: ${{ secrets.YOUR_SECRET_TOKEN }}
       - name : List the current directory
         run: ls -a
       - name : target folder
