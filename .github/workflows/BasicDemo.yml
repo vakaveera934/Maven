@@ -21,6 +21,9 @@ jobs:
       #  uses: codecov/codecov-action@v2.1.0
       - name: Semantic Version
         uses: ncipollo/semantic-version-action@v1
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name : List the current directory
         run: ls -a
       - name : target folder
