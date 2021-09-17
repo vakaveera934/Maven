@@ -19,17 +19,10 @@ jobs:
         run: mvn -B package --file pom.xml -Dmaven.test.skip=true
       #- name: Upload coverage to Codecov
       #  uses: codecov/codecov-action@v2.1.0
-      - name: release
-        uses: actions/create-release@v1
-        id: create_release
-        with:
-          draft: false
-          prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-          tag_name: ${{ github.ref }}
-          body_path: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ github.token }}  
+      - name: Output Run ID
+        run: echo ${{ github.run_id }}
+      - name: Output Run Number
+        run: echo ${{ github.run_number }}
       - name : List the current directory
         run: ls -a
       - name : target folder
