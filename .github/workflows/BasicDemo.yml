@@ -23,6 +23,9 @@ jobs:
         run: echo ${{ github.run_id }}
       - name: Output Run Number
         run: echo ${{ github.run_number }}
+      - uses: einaregilsson/build-number@v1
+        with:
+          token: ${{secrets.github_token}}
       - name : List the current directory
         run: ls -a
       - name : target folder
